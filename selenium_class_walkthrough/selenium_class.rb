@@ -18,6 +18,7 @@ class SeleniumQaToolsForm
 
 	def input_firstname_field(text)
 		@chrome_driver.find_element(:name, FIRST_NAME_FIELD_NAME).send_keys(text)
+		sleep 2
 	end
 
 	def get_first_name_text
@@ -26,6 +27,7 @@ class SeleniumQaToolsForm
 
 	def input_lastname_field(text)
 		@chrome_driver.find_element(:name, LAST_NAME_FIELD_NAME).send_keys(text)
+		sleep 2
 	end
 
 	def choose_sex(text)
@@ -35,15 +37,18 @@ class SeleniumQaToolsForm
 			id = 'sex-0'
 		end	
 		@chrome_driver.find_element(:id, id).click
+		sleep 2
 	end
 
 	def choose_years_of_expeerience(years_minus_one)
 		@chrome_driver.find_element(:id, "exp-#{years_minus_one}").click
+		sleep 2
 		
 	end
 
 	def input_date(date)
 		@chrome_driver.find_element(:id, 'datepicker').send_keys(date)
+		sleep 2
 	end
 
 	def choose_profession(profession)
@@ -53,27 +58,42 @@ class SeleniumQaToolsForm
 			id = 'profession-1'
 		end
 		@chrome_driver.find_element(:id, id).click
+		sleep 2
 	end
 
 	def upload_picture(link)
 		element = @chrome_driver.find_element(:css, 'input[type=file]')
 		element.send_keys("#{link}").click
+		sleep 2
 	end
 
 	def choose_automation_tool(tool)
+		# tool_options = @chrome_driver.find_elements(:name, 'tool')
+		# tool_options.each { |tool_option| tool_option.click if tool_option.text == "#{tool}"}
+
 		if tool == 'QTP'
-			id = 'tool-0'
+			tool_id = 'tool-0'
 		elsif tool == 'Selenium IDE'
-			id = 'tool-1'
+			tool_id = 'tool-1'
 		elsif tool == 'Selenium Webdriver'
-			id = 'tool-2'
+			tool_id = 'tool-2'
 		end
-		@chrome_driver.find_element(:id, id).click
+		@chrome_driver.find_element(:id, tool_id).click
+		sleep 2
 	end
 
-	def choose_continent(value)
-		@chrome_driver.find_element(:id, "continents").find_element(:css,"option=#{value}").click
-		sleep 10
+	def choose_continent(continent)
+		dropdown_list = @chrome_driver.find_element(:id, 'continents')
+		options = dropdown_list.find_elements(:tag_name, 'option')
+		options.each { |option| option.click if option.text == "#{continent}"}
+
+		# options = @chrome_driver.find_element(:id, 'continents').find_element(:tag_name => 'option')
+
+		# # continent_select = @chrome_driver.find_element(:id, 'continents')
+		# # options = continent_select.find_element(:tag_name => 'option')
+		# options[2].click
+		#@chrome_driver.find_element(:id, "continents").find_element(:tag_name,"option.last").click
+		sleep 2
 	end
 
 	def submit

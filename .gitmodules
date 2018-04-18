@@ -1,0 +1,3 @@
+[submodule "random_data_generator"]
+	path = random_data_generator
+	url = https://github.com/MelindaTofalvi/random_data_generator.git
