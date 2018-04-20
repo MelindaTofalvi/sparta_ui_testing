@@ -32,35 +32,35 @@ Automation test built using Capybara to test login/registration process of bbc.c
 
 **Test journey 1**<br>
 GIVEN that the user is on login page<br>
-AND wants to login with incorrect details <br>
+WHEN user wants to login with incorrect details <br>
 THEN the system should respond with the correct error<br>
 
 **Test journey 2**<br>
 GIVEN that the user is on login page<br>
-AND wants to login with no details are entered<br>
+WHEN user wants to login with no details are entered<br>
 THEN the system should respond with the correct error<br>
 
 **Test journey 3**<br>
 GIVEN that the user is on login page<br>
-AND wants to login with a username anda  password that are both too short(less than 2 characters)<br>
+WHEN user wants to login with a username anda  password that are both too short(less than 2 characters)<br>
 THEN the system should respond with the correct error<br>
 
 **Test journey 4**<br>
 GIVEN that the user is on registration page<br>
-AND someone under 13 yrs tries to register with missing/incorrect details<br>
+WHEN user someone under 13 yrs tries to register with missing/incorrect details<br>
 THEN the system should respond with the correct error<br>
 
 **Test journey 5**<br>
 GIVEN that the user is on registration page<br>
-AND someone under 13 yrs tries to register with correct details<br>
+WHEN user someone under 13 yrs tries to register with correct details<br>
 THEN the system should successfully go through the registration process
 
 **Test journey 6**<br>
 GIVEN that the user is on registration page<br>
-AND someone above 13 yrs tries to register with missing/incorrect details<br>
+WHEN user someone above 13 yrs tries to register with missing/incorrect details<br>
 THEN the system should respond with the correct error<br>
 
 **Test journey 7**<br>
 GIVEN that the user is on registration page<br>
-AND someone above 13 yrs tries to register with correct details<br>
+WHEN user someone above 13 yrs tries to register with correct details<br>
 THEN the system should successfully go through the registration process<br>
