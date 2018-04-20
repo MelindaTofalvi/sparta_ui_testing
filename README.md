@@ -26,7 +26,8 @@ Ruby and rspec and selenium!
 
 ## Capybara
 
-Automation test built using Capybara to test login/registration process of bbc.co.uk.
+Automation test built using Capybara to test login/registration process of bbc.co.uk.<br>
+Tests are explained here below using the Gherking syntax:given, when, then.
 
 ### Test journeys throughout the test
 
