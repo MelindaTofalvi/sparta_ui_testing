@@ -1,4 +1,4 @@
-# sparta_ui_testing
+# sparta UI testing
 
 ## Introduction
 This set of work involves looking into automating data on a website also grabbing it and using it alongside rspec . Within this repo you will find examples of array, hash and json data usage and manipulation.
