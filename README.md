@@ -22,43 +22,45 @@ ruby file_name.rb
 Built With
 Ruby and rspec and selenium!
 
+------
+
 ## Capybara
 
 Automation test built using Capybara to test login/registration process of bbc.co.uk.
 
 ### Test journeys throughout the test
 
-**Test journey 1**
-GIVEN that the user is on login page
-AND wants to login with incorrect details 
-THEN the system should respond with the correct error
+**Test journey 1**<br>
+GIVEN that the user is on login page<br>
+AND wants to login with incorrect details <br>
+THEN the system should respond with the correct error<br>
 
-**Test journey 2**
-GIVEN that the user is on login page
-AND wants to login with no details are entered
-THEN the system should respond with the correct error
+**Test journey 2**<br>
+GIVEN that the user is on login page<br>
+AND wants to login with no details are entered<br>
+THEN the system should respond with the correct error<br>
 
-**Test journey 3**
-GIVEN that the user is on login page
-AND wants to login with a username anda  password that are both too short(less than 2 characters)
-THEN the system should respond with the correct error
+**Test journey 3**<br>
+GIVEN that the user is on login page<br>
+AND wants to login with a username anda  password that are both too short(less than 2 characters)<br>
+THEN the system should respond with the correct error<br>
 
-**Test journey 4**
-GIVEN that the user is on registration page
-AND someone under 13 yrs tries to register with missing/incorrect details
-THEN the system should respond with the correct error
+**Test journey 4**<br>
+GIVEN that the user is on registration page<br>
+AND someone under 13 yrs tries to register with missing/incorrect details<br>
+THEN the system should respond with the correct error<br>
 
-**Test journey 5**
-GIVEN that the user is on registration page
-AND someone under 13 yrs tries to register with correct details
+**Test journey 5**<br>
+GIVEN that the user is on registration page<br>
+AND someone under 13 yrs tries to register with correct details<br>
 THEN the system should successfully go through the registration process
 
-**Test journey 6**
-GIVEN that the user is on registration page
-AND someone above 13 yrs tries to register with missing/incorrect details
-THEN the system should respond with the correct error
+**Test journey 6**<br>
+GIVEN that the user is on registration page<br>
+AND someone above 13 yrs tries to register with missing/incorrect details<br>
+THEN the system should respond with the correct error<br>
 
-**Test journey 7**
-GIVEN that the user is on registration page
-AND someone above 13 yrs tries to register with correct details
-THEN the system should successfully go through the registration process
+**Test journey 7**<br>
+GIVEN that the user is on registration page<br>
+AND someone above 13 yrs tries to register with correct details<br>
+THEN the system should successfully go through the registration process<br>
